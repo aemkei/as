@@ -1,1 +1,23 @@
-Astrid Schildkopf lebt und arbeitet als Produktdesignerin in Hamburg, Deutschland. Internationale Aufmerksamkeit erreichte sie mit den originellen Entwürfen ihres Designstudios »Miss Geschick & Lady Lapsus«.
+---
+layout: default
+---
+
+{% comment %}
+
+	Indivisible by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Homepage
+
+	Description:
+
+		Your site's main page.
+
+{% endcomment %}
+
+{% for panel in site.panels %}
+	{% include layout/panel.html panel=panel %}
+{% endfor %}

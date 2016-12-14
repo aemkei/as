@@ -1,0 +1,18 @@
+# Site settings
+title: Astrid Schildkopf
+tagline: Produktdesign
+description: > # this means to ignore newlines until "baseurl:"
+  Astrid Schildkopf lebt und arbeitet als Produktdesignerin in Hamburg, Deutschland.
+  Internationale Aufmerksamkeit erreichte sie mit den originellen Entwürfen ihres Designstudios Miss Geschick & Lady Lapsus.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://schildkopf.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: assets/sass
+
+# Collections
+# Add new slides as HTML files inside the _panels folder
+collections:
+  - panels

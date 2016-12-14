@@ -1,0 +1,28 @@
+---
+html_id: home
+class: special
+title: Home
+image: /images/pic01.jpg
+position: center center
+---
+
+<header>
+	<h1>{{ site.title }}</h1>
+	<p>Ipsum feugiat lorem sed magna<br />
+	etiam adipiscing phasellus</p>
+</header>
+<nav id="nav">
+	<ul class="actions vertical special spinY">
+		{% for panel in site.panels %}
+			{% unless panel.class == "special" %}
+				<li><a href="#{{ panel.html_id }}" class="button">{{ panel.title }}</a></li>
+			{% endunless %}
+		{% endfor %}
+	</ul>
+</nav>
+<ul class="icons">
+	<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+	<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+	<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+	<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+</ul>

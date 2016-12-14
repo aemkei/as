@@ -1,0 +1,63 @@
+{% comment %}
+
+	Indivisible by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Panel
+
+	Description:
+
+		Generates an individual panel based on the content of
+		an HTML file in the _panels folder.
+
+		By setting "class" to "special" in the frontmatter the
+		the Back button will not be included.
+
+	Example panel:
+
+		---
+		html_id: work
+		title: Work
+		image: /images/pic02.jpg
+		position: center center
+		---
+
+		<header>
+			<h2>Work</h2>
+			<p>Magna feugiat lorem ipsum dolor<br />
+			veroeros sed adipiscing</p>
+		</header>
+		<p>Lorem ipsum dolor sit amet, magna etiam adipiscing elit.</p>
+
+	To output the panels:
+
+		{% for panel in site.panels %}
+			{% include components/panel.html panel=panel %}
+		{% endfor %}
+
+{% endcomment %}
+
+<article id="{{ include.panel.html_id }}" class="panel {{ include.panel.class | default: 'secondary' }}">
+
+	{% if include.panel.image %}
+		<div class="image">
+			<img src="{{ site.baseurl }}{{ include.panel.image }}" alt="" data-position="{{ include.panel.position }}" />
+		</div>
+	{% endif %}
+
+	<div class="content">
+
+		{% unless include.panel.class == "special" %}
+			<ul class="actions spinX">
+				<li><a href="#home" class="button small back">Back</a></li>
+			</ul>
+		{% endunless %}
+
+		<div class="inner">
+			{{ include.panel.output }}
+		</div>
+	</div>
+</article>
