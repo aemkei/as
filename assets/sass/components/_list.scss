@@ -139,44 +139,6 @@
 					}
 				}
 			}
-
-			&.spinY {
-				li {
-					@include vendor('perspective', '1000px');
-
-					a {
-						@include vendor('transition', (
-							'background-color #{_duration(transition)} ease',
-							'box-shadow #{_duration(transition)} ease',
-							'color #{_duration(transition)} ease',
-							'transform 0.5s ease-in'
-						));
-
-						&.active {
-							@include vendor('transform', 'rotateY(480deg)');
-						}
-					}
-				}
-			}
-
-			&.spinX {
-				li {
-					@include vendor('perspective', '1000px');
-
-					a {
-						@include vendor('transition', (
-							'background-color #{_duration(transition)} ease',
-							'box-shadow #{_duration(transition)} ease',
-							'color #{_duration(transition)} ease',
-							'transform 0.5s ease-in'
-						));
-
-						&.active {
-							@include vendor('transform', 'rotateX(480deg)');
-						}
-					}
-				}
-			}
 		}
 	}
 
